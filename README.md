@@ -30,7 +30,7 @@ model = KMeans.train(player_rdd, 4, maxIterations=10)
 cluster_centers = model.clusterCenters
 ```
 
-<img src="pic/result1.png" width="500">
+<img src="pic/result1.png" width="750">
 
 
 
@@ -70,6 +70,6 @@ model = kmeans.fit(features)
 cluster_centers = model.clusterCenters()
 ```
 
-<img src="pic/result2.png" width="500">
+<img src="pic/result2.png" width="750">
 
 
