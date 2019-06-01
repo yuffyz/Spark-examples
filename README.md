@@ -1,8 +1,14 @@
-# Lab 3: Spark KMeans for NBA Log Data
+# Spark Examples
 
-This lab make use of the MLlib and ML library to classify the NBA players. 
+This repo make use of Spark MLlib and ML library for classification tasks. Algorithms includes:
 
-## Part I. KMeans with MLlib and RDD
+* Kmeans
+* Logistic Regression
+* Decision Tree
+* Random Forest
+
+
+## I. KMeans with MLlib and RDD
 
 In part I, the players are classified with the MLlib library and Spark RDD. 
 
@@ -34,7 +40,7 @@ cluster_centers = model.clusterCenters
 
 
 
-## Part II: KMeans with ML
+## II: KMeans with ML and DataFrame
 
 In part II, the players are classified with the ML library and Spark Dataframe. 
 
@@ -71,5 +77,20 @@ cluster_centers = model.clusterCenters()
 ```
 
 <img src="pic/result2.png" width="750">
+
+
+## III: Toxic Comment Classification
+
+### Goal: 
+convert the column **commen_text** into a column of sparse vectors for use in a classification algorithm in the spark ml library
+
+### Setup 
+
+1. copy file from local to GCP
+```bash
+scp -i ~/.ssh/my-ssh-key [LOCAL_FILE_PATH] [USERNAME]@[IP_ADDRESS]:~
+```
+2. Store the data in HDFS
+3. Use DataFrame to prepare the data for Logistic Regression APIs.
 
 
